@@ -27,3 +27,16 @@ def disk_usage():
 def uptime_hours():
     boot = psutil.boot_time()
     return round((time.time() - boot) / 3600, 2)
+
+def top_processes(limit=5):
+    processes = []
+
+    for p in psutil.process_iter(["pid", "name", "cpu_percent", "memory_percent"]):
+        try:
+            processes.append(p.info)
+        except:
+            pass
+
+    processes = sorted(processes, key=lambda x: x["memory_percent"], reverse=True)
+
+    return processes[:limit]
