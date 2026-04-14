@@ -1,5 +1,28 @@
-**/.venv/
-**/__pycache__/
-**/*.pyc
-**/*.db
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Secrets
+.env
+*.env
+*.pem
+*.key
+*.crt
+*.secret
+.cloudflared/
+
+# Runtime / local state
+*.db
+*.log
+memory/system_state_history.json
+
+# Scratch / backups
+*_backup.py
+test_runtime.py
+*.pye
+
+# OS/editor
 .DS_Store
+.cursor/
