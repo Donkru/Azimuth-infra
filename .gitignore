@@ -26,3 +26,4 @@ test_runtime.py
 # OS/editor
 .DS_Store
 .cursor/
+apps/
