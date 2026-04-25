@@ -27,3 +27,4 @@ test_runtime.py
 .DS_Store
 .cursor/
 apps/
+.claude/

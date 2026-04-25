@@ -19,7 +19,7 @@ def read_meminfo() -> Dict[str, int]:
             number = value.strip().split()[0]
             result[key] = int(number)
 
-    return result
+    return resultc
 
 
 def memory_snapshot() -> Dict[str, float]:
