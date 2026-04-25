@@ -128,33 +128,9 @@ python3 test_runtime.py
 ## Project Structure
 
 ```
-Azimuth-infra/
-├── agent/
-│   ├── sentinel/          # Core intelligence agent
-│   │   ├── cognition/     # Decision engine, planner, interpreter
-│   │   ├── interface/     # API (FastAPI), CLI, presenter
-│   │   ├── llm/           # LLM client, prompt builder
-│   │   ├── memory/        # History, recall, state store
-│   │   ├── runtime/       # Orchestrator, session, runtime
-│   │   ├── security/      # Authorization, command guard
-│   │   └── tools/         # Tool registry, executor, system tools
-│   └── hikoma/            # HiKOMa persona and interaction layer
-│       ├── identity/      # Persona, voice
-│       ├── interaction/   # Dialogue, presentation
-│       └── relationship/  # Owner model, preferences
-├── telemetry/             # System telemetry modules
-│   ├── cpu.py             # CPU metrics
-│   ├── memory.py          # RAM metrics
-│   ├── process_monitor.py # Process inspection
-│   ├── interpreter.py     # Narrative generation
-│   ├── engine.py          # Analysis engine
-│   └── snapshot.py        # System snapshot
-├── infra/
-│   └── traefik/           # Traefik reverse proxy config
-├── memory/                # Shared state store
-├── owner/                 # Owner profile
-├── docs/                  # Architecture, roadmap, runtime flow
-└── core/                  # Core shared utilities
+<img width="1072" height="853" alt="image" src="https://github.com/user-attachments/assets/aa403d52-597f-4df8-a218-fec24086ca28" />
+
+
 ```
 
 ---
