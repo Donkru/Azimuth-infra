@@ -127,13 +127,8 @@ python3 test_runtime.py
 
 ## Project Structure
 
-```
-<img width="1072" height="853" alt="image" src="https://github.com/user-attachments/assets/aa403d52-597f-4df8-a218-fec24086ca28" />
+<img width="1072" height="853" alt="image" src="https://github.com/user-attachments/assets/c6c213f5-a49e-402c-bdce-998b8f0372a8" />
 
-
-```
-
----
 
 ## Stack
 
@@ -186,13 +181,6 @@ Read [CONTRIBUTING.md](CONTRIBUTING.md) before submitting.
 - [ ] HiKOMa voice and persona refinement
 - [ ] Multi-user support and role-based access
 
----
-
-## License
-
-MIT — see [LICENSE](LICENSE) for details.
-
----
 
 <div align="center">
 Built by <a href="https://github.com/Donkru">Donkru</a> · Contributions welcome
