@@ -1,8 +1,7 @@
 <div align="center">
 
 ```
-<img width="1472" height="370" alt="image" src="https://github.com/user-attachments/assets/726269e7-c123-4848-8115-131783d82a73" />
-
+# Azimuth-Infra
 ```
 
 **Azimuth-infra** — an open infrastructure platform and intelligent agent system
