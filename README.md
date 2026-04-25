@@ -1,8 +1,6 @@
-<div align="center">
 
-```
 # Azimuth-Infra
-```
+
 
 **Azimuth-infra** — an open infrastructure platform and intelligent agent system
 
