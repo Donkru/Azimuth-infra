@@ -1,12 +1,7 @@
 <div align="center">
 
 ```
-   ___       _             _   _
-  / _ \     (_)           | | | |
- / /_\ \ _____  _ __ ___ | |_| |__
- |  _  ||_  / |/ '_ ` _ \| __| '_ \
- | | | | / /| | | | | | | |_| | | |
- \_| |_//___|_|_| |_| |_|\__|_| |_|
+AZIMUTH
 ```
 
 **Azimuth-infra** — an open infrastructure platform and intelligent agent system
