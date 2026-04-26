@@ -1,4 +1,4 @@
-from agent.sentinel.config import SYSTEM_PROMPT
+from agent.sentinel.config.settings import SYSTEM_PROMPT
 from telemetry.system_stats import ( 
 cpu_usage, 
 memory_usage, 

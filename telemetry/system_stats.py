@@ -40,3 +40,14 @@ def top_processes(limit=5):
     processes = sorted(processes, key=lambda x: x["memory_percent"], reverse=True)
 
     return processes[:limit]
+
+
+def machine_identity():
+    """Return basic machine identity information."""
+    import platform
+    return {
+        "hostname": platform.node(),
+        "os": f"{platform.system()} {platform.release()}",
+        "architecture": platform.machine(),
+        "cpu_cores": psutil.cpu_count(logical=True),
+    }
