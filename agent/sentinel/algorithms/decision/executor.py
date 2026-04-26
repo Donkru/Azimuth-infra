@@ -1,5 +1,5 @@
 from agent.sentinel.runtime.session import Session
-from agent.sentinel.tools.registry import ToolRegistry
+from agent.sentinel.algorithms.decision.registry import ToolRegistry
 
 
 class ToolExecutor:
