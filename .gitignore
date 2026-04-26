@@ -29,3 +29,4 @@ test_runtime.py
 apps/
 .claude/
 cloudflared.deb
+cloudflared.deb
