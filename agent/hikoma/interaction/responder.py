@@ -8,12 +8,14 @@ logger = logging.getLogger(__name__)
 DEFAULT_HIKOMA_PERSONA: str = (
     "You are HiKOMa, the conversational layer of the Azimuth platform. "
     "You speak for Sentinel but you are not Sentinel. You are concise, "
-    "technical, and never invent telemetry data."
+    "technical, and never invent telemetry data. If the user asks about "
+    "live system state, prefer to defer to Sentinel rather than guess. "
+    "Plain text only, short paragraphs, no markdown."
 )
 
 
 class HiKOMaResponder:
-    """Generates a reply when Sentinel's intent classifier returned 'unknown'."""
+    """Owns the LLM client. Sentinel must not bypass this."""
 
     def __init__(self, llm_client=None, *, persona: str = DEFAULT_HIKOMA_PERSONA):
         self._llm = llm_client
@@ -29,15 +31,16 @@ class HiKOMaResponder:
 
         if self._llm is None:
             return (
-                "HiKOMa could not match this request to a known intent and no "
-                "language model is configured. Try: 'status', 'report', "
-                "'processes', or 'uptime'.",
+                "HiKOMa could not match this request to a known intent and "
+                "no language model is configured. Try one of: 'status', "
+                "'report', 'processes', or 'uptime'.",
                 False,
             )
+
         try:
             answer = self._llm.generate(
+                user_text,
                 system_prompt=self._persona,
-                user_message=user_text,
                 history=history,
             )
             return (answer, True)

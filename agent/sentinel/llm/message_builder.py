@@ -3,7 +3,7 @@ Build the message list passed to an LLM client.
 
 This module is provider-agnostic — it produces a generic list of
 {role, content} dicts. Concrete clients (LocalLLMClient,
-AnthropicClient, etc.) translate that into their own wire format.
+LLM clients translate messages into their own wire format.
 """
 from __future__ import annotations
 

@@ -19,9 +19,7 @@ PROJECT_ROOT: Path = Path(__file__).resolve().parents[3]
 DATA_DIR: Path = PROJECT_ROOT / "agent" / "sentinel" / "data"
 DB_PATH: Path = Path(os.getenv("DB_PATH", DATA_DIR / "chatbot.db"))
 
-# ─── LLM ─────────────────────────────────────────────────────────────────────
-ANTHROPIC_API_KEY: str | None = os.getenv("ANTHROPIC_API_KEY")
-LLM_MODEL: str = os.getenv("LLM_MODEL", "claude-sonnet-4-6")
+# ─── Local LLM ───────────────────────────────────────────────────────────────
 LLM_MAX_TOKENS: int = int(os.getenv("LLM_MAX_TOKENS", "2048"))
 
 # ─── Sentinel runtime ────────────────────────────────────────────────────────
@@ -62,3 +60,6 @@ SYSTEM_PROMPT: str = (
 LOG_DIR = PROJECT_ROOT / "agent" / "sentinel" / "logs"
 LOG_DIR.mkdir(parents=True, exist_ok=True)
 DATA_DIR.mkdir(parents=True, exist_ok=True)
+
+LOCAL_LLM_URL: str = os.getenv("LOCAL_LLM_URL", "http://127.0.0.1:8088")
+LOCAL_LLM_MODEL: str = os.getenv("LOCAL_LLM_MODEL", "qwen-2.5-7b-instruct-q4_k_m")
